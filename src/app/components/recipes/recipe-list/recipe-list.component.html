@@ -5,20 +5,26 @@
 </div>
 <div class="row">
   <div class="col-12">
-    <a href="#" class="list-group-item clearfix" *ngFor="let recipe of recipes">
-      <div class="float-start">
-        <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
-        <p class="list-group-item-text">{{ recipe.description }}</p>
-      </div>
-      <span class="float-end">
-        <img
-          [src]="recipe.imagePath"
-          alt=""
-          class="img-fluid"
-          style="max-height: 250px"
-        />
-      </span>
-    </a>
-    <app-recipe-item></app-recipe-item>
+    <div class="list-group">
+      <a
+        href="#"
+        class="list-group-item list-group-item-action clearfix"
+        *ngFor="let recipe of recipes"
+      >
+        <div class="d-flex w-100 justify-content-between">
+          <h4 class="mb-1">{{ recipe.name }}</h4>
+          <span>
+            <img
+              [src]="recipe.imagePath"
+              alt="{{ recipe.name }}"
+              class="img-fluid"
+              style="max-height: 250px"
+            />
+          </span>
+        </div>
+        <p class="mb-1">{{ recipe.description }}</p>
+      </a>
+      <app-recipe-item></app-recipe-item>
+    </div>
   </div>
 </div>
