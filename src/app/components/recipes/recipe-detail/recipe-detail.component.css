@@ -1,0 +1,11 @@
+.details-component {
+  margin-top: 50px;
+}
+
+.show {
+  margin-top: 39px;
+  margin-left: -3px;
+}
+ul.show>li:hover{
+    cursor: pointer;
+}
