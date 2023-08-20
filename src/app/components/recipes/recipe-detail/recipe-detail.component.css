@@ -3,9 +3,10 @@
 }
 
 .show {
-  margin-top: 39px;
+  margin-top: 27px;
   margin-left: -3px;
 }
+
 ul.show>li:hover{
     cursor: pointer;
 }

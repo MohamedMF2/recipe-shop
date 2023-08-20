@@ -20,8 +20,19 @@
           Manage Recipe <span class="caret" appDropdown></span>
         </button>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" (click)="onAddToShoppingList()">To Shopping List</a></li>
-          <li><a class="dropdown-item">Edit Recipe</a></li>
+          <li>
+            <a
+              class="dropdown-item"
+              routerLink="/shopping-list"
+              routerLinkActive="active"
+              >To Shopping List</a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item" routerLinkActive="active" (click)="onEditRecipe()"
+              >Edit Recipe</a
+            >
+          </li>
           <li><a class="dropdown-item">Delete Recipe</a></li>
         </ul>
       </div>
