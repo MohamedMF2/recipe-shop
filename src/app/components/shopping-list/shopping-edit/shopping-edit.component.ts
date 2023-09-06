@@ -18,10 +18,17 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
   editedItem!: Ingredient;
 
 
-
-
-
   constructor(private slService: ShoppingListService) { }
+
+  onDelete(){
+    this.slService.deleteIngredient(this.editedItemIndex);
+    this.onClear();
+  }
+
+  onClear(){
+    this.slForm.reset();
+    this.editMode = false;
+  }
 
   onSubmit(form: NgForm) {
     const value = form.value;
